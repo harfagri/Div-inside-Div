@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript en practica</title>
+<style type="text/css">
+
+#rect-rojo{
+	padding:10px;
+	background-color:red;
+	width:250px;
+	height:170px;
+	margin-left:50px;
+	text-align:center;
+    cursor:pointer;
+}
+#rect-verde{
+	padding:10px;
+	background-color:green;
+	width:150px;
+	height:120px;
+	margin-left:35px;
+	text-align:center;
+    cursor:pointer;
+}
+#rect-amarillo{
+	padding:10px;
+	background-color:yellow;
+	width:75px;
+	height:55px;
+	margin-left:30px;
+	text-align:center;
+    cursor:pointer;
+}
+
+
+</style>
+</head>
+<body>
+
+<div onclick="func3()" id="rect-rojo">rojo
+  <div onclick="func2(event)" id="rect-verde">verde
+
+    <div onclick="func1(event)" id="rect-amarillo">amarillo</div>
+
+  </div>
+</div>
+
+<script>
+
+function func1(event) {
+  alert("amarillo");
+    event.stopPropagation();
+}
+function func2(event) {
+  alert("verde");
+    event.stopPropagation();
+}
+function func3() {
+  alert("rojo");
+}
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
